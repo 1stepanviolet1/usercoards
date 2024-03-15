@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 from config import (
     host,
@@ -9,10 +9,19 @@ from config import (
 
 app = Flask(__name__)
 
+title = "TestFlask"
+msg = "This is cool!"
+arr = [12, 34, 56]
+
 
 @app.route("/")
 def index():
-    return "<h1>Hello, World!</h1>"
+    return render_template(
+        'index.html',
+        title=title,
+        msg=msg,
+        arr=arr
+    )
 
 
 if __name__ == '__main__':
