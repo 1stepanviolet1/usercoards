@@ -3,32 +3,32 @@
 {% block content %}
 {{ super() }}
 
-  {% if title %}
-  <h1> {{ title }} </h1>
-  {% else %}
-  <h1> Default title </h1>
-  {% endif %}
+{% if title %}
+<h1> {{ title }} </h1>
+{% else %}
+<h1> Default title </h1>
+{% endif %}
 
-  {% if msg %}
-  <div class="my-3">
-    <h3>{{ msg }}</h3>
-  </div>
-  {% endif %} 
+{% if msg %}
+<div class="my-3">
+  <h3>{{ msg }}</h3>
+</div>
+{% endif %} 
 
-  {% if arr %}
-  <div class="my-3">
-    <ul>
-      {% for el in arr %}
-      <li>{{ el }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endif %}
+{% if arr %}
+<div class="my-3">
+  <ul>
+    {% for el in arr %}
+    <li>{{ el }}</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
-  <button 
-    type="button" 
-    class="btn btn-primary"
-    onclick="to_reg()"
-  >Go to reg :)</button>
+<button 
+  type="button" 
+  class="btn btn-primary"
+  onclick="to_reg()"
+>Go to reg :)</button>
 
 {% endblock %}
