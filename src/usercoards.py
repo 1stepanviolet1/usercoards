@@ -9,18 +9,31 @@ from config import (
 
 app = Flask(__name__)
 
-title = "TestFlask"
-msg = "This is cool!"
-arr = [12, 34, 56]
+data_for_index = {
+    "title": "TestFlask",
+    "msg": "List of int:",
+    "arr": [12, 34, 56],
+}
+
+data_for_reg = {
+    "title": "Reg",
+    "msg": "Авторизация",
+}
 
 
 @app.route("/")
 def index():
     return render_template(
         'index.html',
-        title=title,
-        msg=msg,
-        arr=arr
+        **data_for_index
+    )
+
+
+@app.route("/reg")
+def reg():
+    return render_template(
+        'reg.html',
+        **data_for_reg
     )
 
 

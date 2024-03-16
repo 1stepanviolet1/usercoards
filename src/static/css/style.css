@@ -1,0 +1,45 @@
+h1 {
+  font-size: 4.5em;
+}
+
+h2 {
+  font-size: 3.5em;
+}
+
+h3 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+li {
+  font-size: 1.4em;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: aliceblue;
+  font-family: monospace, Arial, sans-serif;
+}
+
+:root {
+  color-scheme: dark light;
+}
+
+.form-input {
+  background-color: #292929;
+  color: rgb(177, 177, 177);
+}
+
+.container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 75em;
+  max-height: 85em;
+  width: auto;
+  height: auto;
+}
