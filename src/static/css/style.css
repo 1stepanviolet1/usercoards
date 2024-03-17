@@ -49,6 +49,10 @@ body {
   width: 100%;
 }
 
+.btn-to-reg {
+  margin-top: 2em;
+}
+
 .small-pwd {
   font-size: 0.7em;
 }
@@ -70,10 +74,12 @@ body {
 }
 
 .user-coard {
-  text-align: left;
   padding: 0.1em;
   padding-left: 0.7em;
   border-radius: 3em;
   border: 0.02em solid #858585;
-  vertical-align: middle;
+}
+
+.user-info {
+  transform: translate(0%, 30%);
 }

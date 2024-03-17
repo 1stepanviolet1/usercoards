@@ -5,7 +5,11 @@
 {% endif %}
 
 <div class="text-center my-3">
-  <button type="button" class="btn btn-primary long-btn" onclick="to_reg()">
+  <button
+    type="button"
+    class="btn btn-primary long-btn btn-to-reg"
+    onclick="to_reg()"
+  >
     Go to reg :)
   </button>
 </div>
@@ -14,6 +18,8 @@
 
 {% for user in users %}
 <div class="my-2 user-coard">
-  <p>User: {% for k, v in user %} {{ k }}: {{ v }} | {% endfor %}</p>
+  <p class="user-info">
+    User: {% for k, v in user %} {{ k }}: {{ v }} | {% endfor %}
+  </p>
 </div>
 {% endfor %} {% endblock %}
