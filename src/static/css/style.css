@@ -1,5 +1,5 @@
 h1 {
-  font-size: 4.5em;
+  font-size: 320%;
 }
 
 h2 {
@@ -82,5 +82,5 @@ body {
 }
 
 .user-info {
-  transform: translate(0%, 30%);
+  transform: translate(0%, 33%);
 }
