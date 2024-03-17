@@ -1,4 +1,3 @@
-from typing import Any
 from pymysql import connect
 from pymysql.cursors import DictCursor
 from pymysql.connections import Connection
@@ -55,6 +54,11 @@ def get_id_by_username(cursor: DictCursor, username):
     except StopIteration:
         return None
 
+@ReplaceDBwithCursor
+def get_all(cursor: DictCursor):
+    cursor.execute("SELECT * FROM users")
+    return cursor.fetchall()
+
 
 def exec_cmd(db: Connection, cmd):
     cursor = db.cursor()
@@ -69,5 +73,6 @@ __all__ = [
     "delete_by_id",
     "insert_data",
     "get_id_by_username",
-    "exec_cmd"
+    "exec_cmd",
+    "get_all"
 ]

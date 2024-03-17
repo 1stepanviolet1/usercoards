@@ -11,7 +11,7 @@ h3 {
 }
 
 p {
-  font-size: 1.4em;
+  font-size: 1em;
 }
 
 li {
@@ -44,9 +44,9 @@ body {
   height: auto;
 }
 
-.sign-in-btn {
-  border: auto;
-  width: auto;
+.long-btn {
+  border-radius: 3em;
+  width: 100%;
 }
 
 .small-pwd {
@@ -67,4 +67,13 @@ body {
 .flash-msg.error {
   border: 0.02em solid #c80000;
   background: #da5555;
+}
+
+.user-coard {
+  text-align: left;
+  padding: 0.1em;
+  padding-left: 0.7em;
+  border-radius: 3em;
+  border: 0.02em solid #858585;
+  vertical-align: middle;
 }

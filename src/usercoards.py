@@ -9,7 +9,8 @@ from dbapi import (
     connect_to_db,
     close_db,
     get_id_by_username,
-    insert_data
+    insert_data,
+    get_all
 )
 
 
@@ -25,9 +26,7 @@ app.config["SECRET_KEY"] = "ks76dgsKJHsfg76JHdusvb7s7gdf"
 
 
 data_for_index = {
-    "title": "TestFlask",
-    "msg": "List of int:",
-    "arr": [12, 34, 56],
+    "title": "usercoards"
 }
 
 
@@ -39,13 +38,18 @@ def render_reg(**values):
         **values
     )
 
+def render_index(**values):
+    return render_template(
+        'index.html',
+        title="usercoards",
+        **values
+    )
+
 
 @app.route("/")
 def index():
-    return render_template(
-        'index.html',
-        **data_for_index
-    )
+    users = get_all(DB)
+    return render_index(users=[user.items() for user in users])
 
 
 @app.route("/reg", methods=["GET", "POST"])
