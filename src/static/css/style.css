@@ -76,6 +76,7 @@ body {
 .user-coard {
   padding: 0.1em;
   padding-left: 0.7em;
+  padding-right: 0.7em;
   border-radius: 3em;
   border: 0.02em solid #858585;
 }
